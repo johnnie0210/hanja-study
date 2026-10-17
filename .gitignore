@@ -1,0 +1,11 @@
+# 의존성 / 빌드 산출물
+node_modules/
+*.log
+
+# 원본 엑셀 (개인 자료 — 저장소에 올리지 않음)
+*.xlsx
+*.xls
+
+# OS
+Thumbs.db
+.DS_Store
