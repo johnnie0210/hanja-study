@@ -2,9 +2,12 @@
 node_modules/
 *.log
 
-# 원본 엑셀 (개인 자료 — 저장소에 올리지 않음)
+# 원본 엑셀
 *.xlsx
 *.xls
+
+# 자동 반영용 원본만 저장소에 포함
+!기말_한자.xlsx
 
 # OS
 Thumbs.db

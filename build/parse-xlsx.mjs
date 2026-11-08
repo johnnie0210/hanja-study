@@ -6,7 +6,10 @@
 //
 // 엑셀 구조(Sheet1): A=한자, B=뜻, C=음
 // 빈 줄을 기준으로 그룹을 나누며, 각 그룹은
-//   [개별 한자들 ...] + [합성어(사자성어/단어) 1개] 로 구성됩니다.
+//   [개별 한자들 ...] + [합성어(사자성어/단어)] 로 구성됩니다.
+//
+// 엑셀 경로를 생략하면 저장소 안의 ../기말_한자.xlsx 를 먼저 찾고,
+// 없으면 기존 로컬 경로(../../기말_한자.xlsx)를 사용합니다.
 
 import XLSX from 'xlsx';
 import fs from 'fs';
@@ -14,7 +17,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const SRC = process.argv[2] || path.resolve(__dirname, '../../기말_한자.xlsx');
+const SOURCE_CANDIDATES = [
+  path.resolve(__dirname, '../기말_한자.xlsx'),    // 저장소 안 (GitHub Actions)
+  path.resolve(__dirname, '../../기말_한자.xlsx'), // 저장소 밖 (기존 로컬 경로)
+];
+const SRC = process.argv[2] || SOURCE_CANDIDATES.find((p) => fs.existsSync(p)) || SOURCE_CANDIDATES[0];
 const OUT = path.resolve(__dirname, '../data.js');
 
 const wb = XLSX.readFile(SRC);
@@ -46,10 +53,10 @@ let id = 0;
 for (const g of groups) {
   // 한글자 = 개별 한자, 그보다 길면 합성어/구절
   const chars = g.filter((x) => [...x.hanja].length === 1);
-  const word = g.filter((x) => [...x.hanja].length > 1)[0] || null;
+  const words = g.filter((x) => [...x.hanja].length > 1);
 
   // 합성어가 없으면 개별 한자 목록 (예: 천간 甲乙丙..., 지지 子丑...)
-  if (!word) {
+  if (!words.length) {
     entries.push({
       id: ++id, type: 'charlist',
       hanja: chars.map((c) => c.hanja).join(''),
@@ -59,21 +66,30 @@ for (const g of groups) {
     continue;
   }
 
-  // 음독이 비어 있으면 개별 한자 음을 이어 붙여 유도
-  let reading = word.reading;
-  if (!reading && chars.length) reading = chars.map((c) => c.reading).join('');
+  // 한 묶음에 합성어가 여러 개 있으면 각각 항목으로 만든다.
+  for (const word of words) {
+    // 합성어가 하나뿐이면 기존처럼 묶음의 개별 한자를 모두 사용하고,
+    // 여러 개면 해당 합성어에 포함된 한자만 골라 사용한다.
+    const wordChars = words.length === 1
+      ? chars
+      : chars.filter((c) => [...word.hanja].includes(c.hanja));
 
-  const len = [...word.hanja].length;
-  const type = chars.length === 4 && len === 4 ? 'idiom'
-    : len <= 2 ? 'word'
-      : len >= 5 ? 'long'
-        : 'phrase';
+    // 음독이 비어 있으면 개별 한자 음을 이어 붙여 유도
+    let reading = word.reading;
+    if (!reading && wordChars.length) reading = wordChars.map((c) => c.reading).join('');
 
-  entries.push({
-    id: ++id, type,
-    hanja: word.hanja, meaning: word.meaning, reading,
-    chars: chars.map((c) => ({ hanja: c.hanja, meaning: c.meaning, reading: c.reading })),
-  });
+    const len = [...word.hanja].length;
+    const type = wordChars.length === 4 && len === 4 ? 'idiom'
+      : len <= 2 ? 'word'
+        : len >= 5 ? 'long'
+          : 'phrase';
+
+    entries.push({
+      id: ++id, type,
+      hanja: word.hanja, meaning: word.meaning, reading,
+      chars: wordChars.map((c) => ({ hanja: c.hanja, meaning: c.meaning, reading: c.reading })),
+    });
+  }
 }
 
 // 개별 한자 취합 (한자별 등장한 뜻/음 모음)
@@ -103,6 +119,16 @@ const data = {
   entries,
   characters,
 };
+
+// 내용이 이전과 같으면 생성 시각을 유지해 불필요한 커밋을 막는다.
+try {
+  const prev = fs.readFileSync(OUT, 'utf8').match(/window\.HANJA_DATA\s*=\s*(\{[\s\S]*\});\s*$/);
+  if (prev) {
+    const old = JSON.parse(prev[1]);
+    const content = (o) => JSON.stringify({ ...o, generated: undefined });
+    if (old.generated && content(old) === content(data)) data.generated = old.generated;
+  }
+} catch { /* 이전 파일이 없거나 형식이 다르면 무시 */ }
 
 fs.writeFileSync(OUT,
   '// 자동 생성 파일 — ' + path.basename(SRC) + ' 에서 파싱됨\n'

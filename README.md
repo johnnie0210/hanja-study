@@ -24,23 +24,46 @@ hanja-app/
 ├─ styles.css              스타일
 ├─ app.js                  앱 로직
 ├─ data.js                 ← 엑셀에서 자동 생성 (직접 수정 금지)
+├─ 기말_한자.xlsx          공부할 원본 엑셀
 ├─ manifest.webmanifest    PWA 설정
 ├─ sw.js                   서비스 워커 (오프라인)
 ├─ icons/                  앱 아이콘
+├─ .github/workflows/
+│  └─ update-data.yml      엑셀 업로드 시 data.js 자동 생성
 └─ build/
    ├─ parse-xlsx.mjs       엑셀 → data.js 변환
    └─ package.json
 ```
 
-## 엑셀 수정 후 다시 반영하기
+## 엑셀만 올리면 자동 반영 (GitHub)
+
+GitHub 저장소에 `기말_한자.xlsx` 파일을 올리거나 교체하면, GitHub Actions가
+자동으로 `data.js`를 다시 만들어 커밋합니다.
+
+1. GitHub 저장소에서 `기말_한자.xlsx`를 업로드/교체합니다.
+   - **Add file → Upload files** 로 올리거나, 기존 파일을 열어 **Replace** 합니다.
+   - 파일 이름은 반드시 `기말_한자.xlsx` 그대로 유지해 주세요. (이름이 다르면 자동 반영되지 않습니다.)
+2. **Commit changes** 를 누릅니다.
+3. 저장소의 **Actions** 탭에서 `Update hanja data` 워크플로가 실행됩니다.
+4. 완료되면 `data.js`가 자동으로 갱신되고, 잠시 후 사이트에 반영됩니다.
+   - 서비스 워커가 **network-first**라서 앱을 다시 열면 최신 내용을 받아옵니다.
+
+> 워크플로가 실패하면 **Actions** 탭에서 로그를 확인해 주세요.
+> 저장소 **Settings → Actions → General → Workflow permissions** 가
+> **Read and write permissions** 인지도 확인하면 좋습니다.
+
+## PC에서 직접 반영하기
 
 엑셀(`기말_한자.xlsx`)을 고친 뒤 아래를 실행하면 `data.js`가 다시 만들어집니다.
 
 ```powershell
 cd build
 npm install          # 최초 1회
-node parse-xlsx.mjs "..\..\기말_한자.xlsx"
+node parse-xlsx.mjs
 ```
+
+- 저장소 안의 `../기말_한자.xlsx`를 자동으로 찾습니다.
+- 다른 경로의 엑셀을 쓰려면 `node parse-xlsx.mjs "..\..\기말_한자.xlsx"` 처럼 경로를 넘기면 됩니다.
 
 ## 엑셀 형식 (Sheet1)
 
@@ -49,7 +72,8 @@ node parse-xlsx.mjs "..\..\기말_한자.xlsx"
 | 한자 | 뜻 | 음 |
 
 - **빈 줄**을 기준으로 문제 묶음을 구분합니다.
-- 각 묶음은 `개별 한자들` + `합성어(사자성어/단어) 1개` 순서로 적습니다.
+- 각 묶음은 `개별 한자들` + `합성어(사자성어/단어)` 순서로 적습니다.
+- 한 묶음에 합성어가 여러 개 있어도 각각 별도 항목으로 만들어집니다.
 - 예시)
 
   | 吾 | 나 | 오 |

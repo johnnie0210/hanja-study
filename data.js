@@ -2,11 +2,11 @@
 // 재생성: cd build && node parse-xlsx.mjs
 window.HANJA_DATA = {
   "source": "기말_한자.xlsx",
-  "generated": "2026-10-17T13:37:47.515Z",
+  "generated": "2026-11-08T10:33:20.134Z",
   "counts": {
-    "entries": 30,
-    "characters": 93,
-    "idioms": 18
+    "entries": 47,
+    "characters": 114,
+    "idioms": 22
   },
   "typeLabel": {
     "idiom": "사자성어",
@@ -702,162 +702,101 @@ window.HANJA_DATA = {
     },
     {
       "id": 26,
-      "type": "charlist",
-      "hanja": "甲乙丙丁戊己庚辛壬癸",
-      "meaning": "",
-      "reading": "",
+      "type": "word",
+      "hanja": "名節",
+      "meaning": "해마다 일정하게 지켜 즐기거나 기념하는 때",
+      "reading": "명절",
       "chars": [
         {
-          "hanja": "甲",
-          "meaning": "",
-          "reading": "갑"
+          "hanja": "名",
+          "meaning": "이름",
+          "reading": "명"
         },
         {
-          "hanja": "乙",
-          "meaning": "",
-          "reading": "을"
-        },
-        {
-          "hanja": "丙",
-          "meaning": "",
-          "reading": "병"
-        },
-        {
-          "hanja": "丁",
-          "meaning": "",
-          "reading": "정"
-        },
-        {
-          "hanja": "戊",
-          "meaning": "",
-          "reading": "무"
-        },
-        {
-          "hanja": "己",
-          "meaning": "",
-          "reading": "기"
-        },
-        {
-          "hanja": "庚",
-          "meaning": "",
-          "reading": "경"
-        },
-        {
-          "hanja": "辛",
-          "meaning": "",
-          "reading": "신"
-        },
-        {
-          "hanja": "壬",
-          "meaning": "",
-          "reading": "임"
-        },
-        {
-          "hanja": "癸",
-          "meaning": "",
-          "reading": "계"
+          "hanja": "節",
+          "meaning": "마디, 절기",
+          "reading": "절"
         }
       ]
     },
     {
       "id": 27,
-      "type": "charlist",
-      "hanja": "子丑寅卯辰巳午未申酉戌亥",
-      "meaning": "",
-      "reading": "",
+      "type": "idiom",
+      "hanja": "歲時風俗",
+      "meaning": "해마다 일정한 시기에 되풀이하여 행해 온 고유의 풍속",
+      "reading": "세시풍속",
       "chars": [
         {
-          "hanja": "子",
-          "meaning": "쥐",
-          "reading": "자"
+          "hanja": "歲",
+          "meaning": "해",
+          "reading": "세"
         },
         {
-          "hanja": "丑",
-          "meaning": "소",
-          "reading": "축"
+          "hanja": "時",
+          "meaning": "때",
+          "reading": "시"
         },
         {
-          "hanja": "寅",
-          "meaning": "호랑이",
-          "reading": "인"
+          "hanja": "風",
+          "meaning": "바람",
+          "reading": "풍"
         },
         {
-          "hanja": "卯",
-          "meaning": "토끼",
-          "reading": "묘"
-        },
-        {
-          "hanja": "辰",
-          "meaning": "용",
-          "reading": "진"
-        },
-        {
-          "hanja": "巳",
-          "meaning": "뱀",
-          "reading": "사"
-        },
-        {
-          "hanja": "午",
-          "meaning": "말",
-          "reading": "오"
-        },
-        {
-          "hanja": "未",
-          "meaning": "양",
-          "reading": "미"
-        },
-        {
-          "hanja": "申",
-          "meaning": "원숭이",
-          "reading": "신"
-        },
-        {
-          "hanja": "酉",
-          "meaning": "닭",
-          "reading": "유"
-        },
-        {
-          "hanja": "戌",
-          "meaning": "개",
-          "reading": "술"
-        },
-        {
-          "hanja": "亥",
-          "meaning": "돼지",
-          "reading": "해"
+          "hanja": "俗",
+          "meaning": "풍속",
+          "reading": "속"
         }
       ]
     },
     {
       "id": 28,
       "type": "word",
-      "hanja": "午前",
-      "meaning": "자정(子正)부터 낮 열두 시(時)까지의 시간(時間)",
-      "reading": "오전",
+      "hanja": "元日",
+      "meaning": "설날 (음력 1월 1일)",
+      "reading": "원일",
       "chars": [
         {
-          "hanja": "午",
-          "meaning": "낮",
-          "reading": "오"
+          "hanja": "元",
+          "meaning": "으뜸",
+          "reading": "원"
         },
         {
-          "hanja": "前",
-          "meaning": "앞",
-          "reading": "전"
+          "hanja": "日",
+          "meaning": "날",
+          "reading": "일"
         }
       ]
     },
     {
       "id": 29,
       "type": "word",
-      "hanja": "正午",
-      "meaning": "낮 열두 시(時)",
-      "reading": "정오",
+      "hanja": "上元",
+      "meaning": "정월 대보름 (음력 1월 15일)",
+      "reading": "상원",
       "chars": [
         {
-          "hanja": "正",
-          "meaning": "바르다",
-          "reading": "정"
+          "hanja": "上",
+          "meaning": "위",
+          "reading": "상"
+        },
+        {
+          "hanja": "元",
+          "meaning": "으뜸",
+          "reading": "원"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "type": "word",
+      "hanja": "端午",
+      "meaning": "수릿날 (음력 5월 5일)",
+      "reading": "단오",
+      "chars": [
+        {
+          "hanja": "端",
+          "meaning": "끝",
+          "reading": "단"
         },
         {
           "hanja": "午",
@@ -867,21 +806,424 @@ window.HANJA_DATA = {
       ]
     },
     {
-      "id": 30,
+      "id": 31,
       "type": "word",
-      "hanja": "午後",
-      "meaning": "정오(正午)부터 밤 열두 시(時)까지의 시간(時間)",
-      "reading": "오후",
+      "hanja": "秋夕",
+      "meaning": "한가위 (음력 8월 15일)",
+      "reading": "추석",
       "chars": [
         {
-          "hanja": "午",
-          "meaning": "낮",
-          "reading": "오"
+          "hanja": "秋",
+          "meaning": "가을",
+          "reading": "추"
         },
         {
-          "hanja": "後",
-          "meaning": "뒤",
-          "reading": "후"
+          "hanja": "夕",
+          "meaning": "저녁",
+          "reading": "석"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "type": "word",
+      "hanja": "歲拜",
+      "meaning": "섣달그믐이나 정초에 웃어른께 인사로 하는 절",
+      "reading": "세배",
+      "chars": [
+        {
+          "hanja": "歲",
+          "meaning": "해",
+          "reading": "세"
+        },
+        {
+          "hanja": "拜",
+          "meaning": "절",
+          "reading": "배"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "type": "word",
+      "hanja": "德談",
+      "meaning": "남이 잘되기를 비는 말",
+      "reading": "덕담",
+      "chars": [
+        {
+          "hanja": "德",
+          "meaning": "덕",
+          "reading": "덕"
+        },
+        {
+          "hanja": "談",
+          "meaning": "말씀",
+          "reading": "담"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "type": "word",
+      "hanja": "省墓",
+      "meaning": "조상의 산소를 찾아가서 돌봄",
+      "reading": "성묘",
+      "chars": [
+        {
+          "hanja": "省",
+          "meaning": "살피다",
+          "reading": "성"
+        },
+        {
+          "hanja": "墓",
+          "meaning": "무덤",
+          "reading": "묘"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "type": "word",
+      "hanja": "于山",
+      "meaning": "독도",
+      "reading": "우산",
+      "chars": [
+        {
+          "hanja": "于",
+          "meaning": "어조사",
+          "reading": "우"
+        },
+        {
+          "hanja": "山",
+          "meaning": "뫼",
+          "reading": "산"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "type": "word",
+      "hanja": "武陵",
+      "meaning": "울릉도",
+      "reading": "무릉",
+      "chars": [
+        {
+          "hanja": "武",
+          "meaning": "무사",
+          "reading": "무"
+        },
+        {
+          "hanja": "陵",
+          "meaning": "언덕",
+          "reading": "릉"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "type": "word",
+      "hanja": "二島",
+      "meaning": "두 섬",
+      "reading": "이도",
+      "chars": [
+        {
+          "hanja": "二",
+          "meaning": "둘",
+          "reading": "이"
+        },
+        {
+          "hanja": "島",
+          "meaning": "섬",
+          "reading": "도"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "type": "long",
+      "hanja": "于山武陵二島는",
+      "meaning": "우산과 무들 두 섬은",
+      "reading": "우산무릉이도",
+      "chars": []
+    },
+    {
+      "id": 39,
+      "type": "long",
+      "hanja": "在縣正東海中 이라",
+      "meaning": "(울진)현의 정동쪽 바다 가운데 있다.",
+      "reading": "재현정동해중",
+      "chars": [
+        {
+          "hanja": "在",
+          "meaning": "있다",
+          "reading": "재"
+        },
+        {
+          "hanja": "縣",
+          "meaning": "고을",
+          "reading": "현"
+        },
+        {
+          "hanja": "正",
+          "meaning": "바를",
+          "reading": "정"
+        },
+        {
+          "hanja": "東",
+          "meaning": "동녘",
+          "reading": "동"
+        },
+        {
+          "hanja": "海",
+          "meaning": "바다",
+          "reading": "해"
+        },
+        {
+          "hanja": "中",
+          "meaning": "가운데",
+          "reading": "중"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "type": "idiom",
+      "hanja": "相去不遠",
+      "meaning": "서로 거리가 멀지 않아",
+      "reading": "상거불원",
+      "chars": [
+        {
+          "hanja": "相",
+          "meaning": "서로",
+          "reading": "상"
+        },
+        {
+          "hanja": "去",
+          "meaning": "가다",
+          "reading": "거"
+        },
+        {
+          "hanja": "不",
+          "meaning": "아니",
+          "reading": "불"
+        },
+        {
+          "hanja": "遠",
+          "meaning": "멀다",
+          "reading": "원"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "type": "word",
+      "hanja": "風日",
+      "meaning": "바람과 볕이라는 뜻으로 날씨를 말함",
+      "reading": "풍일",
+      "chars": [
+        {
+          "hanja": "風",
+          "meaning": "바람",
+          "reading": "풍"
+        },
+        {
+          "hanja": "日",
+          "meaning": "날",
+          "reading": "일"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "type": "idiom",
+      "hanja": "風日淸明",
+      "meaning": "날씨가 맑고 밝으면",
+      "reading": "풍일청명",
+      "chars": [
+        {
+          "hanja": "風",
+          "meaning": "바람",
+          "reading": "풍"
+        },
+        {
+          "hanja": "日",
+          "meaning": "날",
+          "reading": "일"
+        },
+        {
+          "hanja": "淸",
+          "meaning": "맑다",
+          "reading": "청"
+        },
+        {
+          "hanja": "明",
+          "meaning": "밝을",
+          "reading": "명"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "type": "idiom",
+      "hanja": "則可望見",
+      "meaning": "(서로) 바라볼 수 있다",
+      "reading": "즉가망견",
+      "chars": [
+        {
+          "hanja": "則",
+          "meaning": "곧",
+          "reading": "즉"
+        },
+        {
+          "hanja": "可",
+          "meaning": "옳다. 가능하다, 할수있다",
+          "reading": "가"
+        },
+        {
+          "hanja": "望",
+          "meaning": "바라다",
+          "reading": "망"
+        },
+        {
+          "hanja": "見",
+          "meaning": "보다",
+          "reading": "견"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "type": "long",
+      "hanja": "郞云月出來 하더니",
+      "meaning": "임께서 이르시길 달이 뜨면 오신다 하더니",
+      "reading": "낭운월출래",
+      "chars": [
+        {
+          "hanja": "郞",
+          "meaning": "사내",
+          "reading": "랑"
+        },
+        {
+          "hanja": "云",
+          "meaning": "이를",
+          "reading": "운"
+        },
+        {
+          "hanja": "月",
+          "meaning": "달",
+          "reading": "월"
+        },
+        {
+          "hanja": "出",
+          "meaning": "날",
+          "reading": "출"
+        },
+        {
+          "hanja": "來",
+          "meaning": "올",
+          "reading": "래"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "type": "long",
+      "hanja": "月出郞不來 라",
+      "meaning": "달이 떴어도 임은 오시지 않네",
+      "reading": "월출낭불래",
+      "chars": [
+        {
+          "hanja": "月",
+          "meaning": "달",
+          "reading": "월"
+        },
+        {
+          "hanja": "出",
+          "meaning": "날",
+          "reading": "출"
+        },
+        {
+          "hanja": "郞",
+          "meaning": "사내",
+          "reading": "랑"
+        },
+        {
+          "hanja": "不",
+          "meaning": "아니",
+          "reading": "불"
+        },
+        {
+          "hanja": "來",
+          "meaning": "올",
+          "reading": "래"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "type": "long",
+      "hanja": "想應君在處 에",
+      "meaning": "생각건대 아마도 임이 계신 곳에는",
+      "reading": "상응군재처",
+      "chars": [
+        {
+          "hanja": "想",
+          "meaning": "생각",
+          "reading": "상"
+        },
+        {
+          "hanja": "應",
+          "meaning": "응할다",
+          "reading": "응"
+        },
+        {
+          "hanja": "君",
+          "meaning": "임금",
+          "reading": "군"
+        },
+        {
+          "hanja": "在",
+          "meaning": "있을",
+          "reading": "재"
+        },
+        {
+          "hanja": "處",
+          "meaning": "곳",
+          "reading": "처"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "type": "long",
+      "hanja": "山高月上遲 리라",
+      "meaning": "산이 높아 달이 뜨는것도 더딘 것이리라",
+      "reading": "산고월상지",
+      "chars": [
+        {
+          "hanja": "山",
+          "meaning": "뫼",
+          "reading": "산"
+        },
+        {
+          "hanja": "高",
+          "meaning": "높을",
+          "reading": "고"
+        },
+        {
+          "hanja": "月",
+          "meaning": "달",
+          "reading": "월"
+        },
+        {
+          "hanja": "上",
+          "meaning": "위",
+          "reading": "상"
+        },
+        {
+          "hanja": "遲",
+          "meaning": "더디다",
+          "reading": "지"
         }
       ]
     }
@@ -996,7 +1338,9 @@ window.HANJA_DATA = {
         "세"
       ],
       "in": [
-        3
+        3,
+        27,
+        32
       ]
     },
     {
@@ -1047,7 +1391,8 @@ window.HANJA_DATA = {
         "우"
       ],
       "in": [
-        4
+        4,
+        35
       ]
     },
     {
@@ -1198,7 +1543,9 @@ window.HANJA_DATA = {
         11,
         15,
         21,
-        22
+        22,
+        40,
+        45
       ]
     },
     {
@@ -1222,8 +1569,7 @@ window.HANJA_DATA = {
         "정"
       ],
       "in": [
-        7,
-        26
+        7
       ]
     },
     {
@@ -1273,7 +1619,9 @@ window.HANJA_DATA = {
       "in": [
         8,
         12,
-        21
+        21,
+        35,
+        47
       ]
     },
     {
@@ -1546,7 +1894,10 @@ window.HANJA_DATA = {
         "일"
       ],
       "in": [
-        17
+        17,
+        28,
+        41,
+        42
       ]
     },
     {
@@ -1673,14 +2024,16 @@ window.HANJA_DATA = {
     {
       "hanja": "高",
       "meanings": [
-        "높다"
+        "높다",
+        "높을"
       ],
       "readings": [
         "고"
       ],
       "in": [
         21,
-        22
+        22,
+        47
       ]
     },
     {
@@ -1744,277 +2097,554 @@ window.HANJA_DATA = {
       ]
     },
     {
-      "hanja": "甲",
-      "meanings": [],
-      "readings": [
-        "갑"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "乙",
-      "meanings": [],
-      "readings": [
-        "을"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "丙",
-      "meanings": [],
-      "readings": [
-        "병"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "戊",
-      "meanings": [],
-      "readings": [
-        "무"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "己",
-      "meanings": [],
-      "readings": [
-        "기"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "庚",
-      "meanings": [],
-      "readings": [
-        "경"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "辛",
-      "meanings": [],
-      "readings": [
-        "신"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "壬",
-      "meanings": [],
-      "readings": [
-        "임"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "癸",
-      "meanings": [],
-      "readings": [
-        "계"
-      ],
-      "in": [
-        26
-      ]
-    },
-    {
-      "hanja": "子",
+      "hanja": "名",
       "meanings": [
-        "쥐"
+        "이름"
       ],
       "readings": [
-        "자"
+        "명"
+      ],
+      "in": [
+        26
+      ]
+    },
+    {
+      "hanja": "節",
+      "meanings": [
+        "마디, 절기"
+      ],
+      "readings": [
+        "절"
+      ],
+      "in": [
+        26
+      ]
+    },
+    {
+      "hanja": "時",
+      "meanings": [
+        "때"
+      ],
+      "readings": [
+        "시"
       ],
       "in": [
         27
       ]
     },
     {
-      "hanja": "丑",
+      "hanja": "風",
       "meanings": [
-        "소"
+        "바람"
       ],
       "readings": [
-        "축"
+        "풍"
+      ],
+      "in": [
+        27,
+        41,
+        42
+      ]
+    },
+    {
+      "hanja": "俗",
+      "meanings": [
+        "풍속"
+      ],
+      "readings": [
+        "속"
       ],
       "in": [
         27
       ]
     },
     {
-      "hanja": "寅",
+      "hanja": "元",
       "meanings": [
-        "호랑이"
+        "으뜸"
       ],
       "readings": [
-        "인"
+        "원"
       ],
       "in": [
-        27
+        28,
+        29
       ]
     },
     {
-      "hanja": "卯",
+      "hanja": "上",
       "meanings": [
-        "토끼"
+        "위"
       ],
       "readings": [
-        "묘"
+        "상"
       ],
       "in": [
-        27
+        29,
+        47
       ]
     },
     {
-      "hanja": "辰",
+      "hanja": "端",
       "meanings": [
-        "용"
+        "끝"
       ],
       "readings": [
-        "진"
+        "단"
       ],
       "in": [
-        27
-      ]
-    },
-    {
-      "hanja": "巳",
-      "meanings": [
-        "뱀"
-      ],
-      "readings": [
-        "사"
-      ],
-      "in": [
-        27
+        30
       ]
     },
     {
       "hanja": "午",
       "meanings": [
-        "말",
         "낮"
       ],
       "readings": [
         "오"
       ],
       "in": [
-        27,
-        28,
-        29,
         30
       ]
     },
     {
-      "hanja": "未",
+      "hanja": "秋",
       "meanings": [
-        "양"
+        "가을"
       ],
       "readings": [
-        "미"
+        "추"
       ],
       "in": [
-        27
+        31
       ]
     },
     {
-      "hanja": "申",
+      "hanja": "夕",
       "meanings": [
-        "원숭이"
+        "저녁"
       ],
       "readings": [
-        "신"
+        "석"
       ],
       "in": [
-        27
+        31
       ]
     },
     {
-      "hanja": "酉",
+      "hanja": "拜",
       "meanings": [
-        "닭"
+        "절"
       ],
       "readings": [
-        "유"
+        "배"
       ],
       "in": [
-        27
+        32
       ]
     },
     {
-      "hanja": "戌",
+      "hanja": "德",
       "meanings": [
-        "개"
+        "덕"
       ],
       "readings": [
-        "술"
+        "덕"
       ],
       "in": [
-        27
+        33
       ]
     },
     {
-      "hanja": "亥",
+      "hanja": "談",
       "meanings": [
-        "돼지"
+        "말씀"
       ],
       "readings": [
-        "해"
+        "담"
       ],
       "in": [
-        27
+        33
       ]
     },
     {
-      "hanja": "前",
+      "hanja": "省",
       "meanings": [
-        "앞"
+        "살피다"
       ],
       "readings": [
-        "전"
+        "성"
       ],
       "in": [
-        28
+        34
+      ]
+    },
+    {
+      "hanja": "墓",
+      "meanings": [
+        "무덤"
+      ],
+      "readings": [
+        "묘"
+      ],
+      "in": [
+        34
+      ]
+    },
+    {
+      "hanja": "武",
+      "meanings": [
+        "무사"
+      ],
+      "readings": [
+        "무"
+      ],
+      "in": [
+        36
+      ]
+    },
+    {
+      "hanja": "陵",
+      "meanings": [
+        "언덕"
+      ],
+      "readings": [
+        "릉"
+      ],
+      "in": [
+        36
+      ]
+    },
+    {
+      "hanja": "二",
+      "meanings": [
+        "둘"
+      ],
+      "readings": [
+        "이"
+      ],
+      "in": [
+        37
+      ]
+    },
+    {
+      "hanja": "島",
+      "meanings": [
+        "섬"
+      ],
+      "readings": [
+        "도"
+      ],
+      "in": [
+        37
+      ]
+    },
+    {
+      "hanja": "在",
+      "meanings": [
+        "있다",
+        "있을"
+      ],
+      "readings": [
+        "재"
+      ],
+      "in": [
+        39,
+        46
+      ]
+    },
+    {
+      "hanja": "縣",
+      "meanings": [
+        "고을"
+      ],
+      "readings": [
+        "현"
+      ],
+      "in": [
+        39
       ]
     },
     {
       "hanja": "正",
       "meanings": [
-        "바르다"
+        "바를"
       ],
       "readings": [
         "정"
       ],
       "in": [
-        29
+        39
       ]
     },
     {
-      "hanja": "後",
+      "hanja": "東",
       "meanings": [
-        "뒤"
+        "동녘"
       ],
       "readings": [
-        "후"
+        "동"
       ],
       "in": [
-        30
+        39
+      ]
+    },
+    {
+      "hanja": "海",
+      "meanings": [
+        "바다"
+      ],
+      "readings": [
+        "해"
+      ],
+      "in": [
+        39
+      ]
+    },
+    {
+      "hanja": "中",
+      "meanings": [
+        "가운데"
+      ],
+      "readings": [
+        "중"
+      ],
+      "in": [
+        39
+      ]
+    },
+    {
+      "hanja": "相",
+      "meanings": [
+        "서로"
+      ],
+      "readings": [
+        "상"
+      ],
+      "in": [
+        40
+      ]
+    },
+    {
+      "hanja": "去",
+      "meanings": [
+        "가다"
+      ],
+      "readings": [
+        "거"
+      ],
+      "in": [
+        40
+      ]
+    },
+    {
+      "hanja": "遠",
+      "meanings": [
+        "멀다"
+      ],
+      "readings": [
+        "원"
+      ],
+      "in": [
+        40
+      ]
+    },
+    {
+      "hanja": "淸",
+      "meanings": [
+        "맑다"
+      ],
+      "readings": [
+        "청"
+      ],
+      "in": [
+        42
+      ]
+    },
+    {
+      "hanja": "明",
+      "meanings": [
+        "밝을"
+      ],
+      "readings": [
+        "명"
+      ],
+      "in": [
+        42
+      ]
+    },
+    {
+      "hanja": "則",
+      "meanings": [
+        "곧"
+      ],
+      "readings": [
+        "즉"
+      ],
+      "in": [
+        43
+      ]
+    },
+    {
+      "hanja": "可",
+      "meanings": [
+        "옳다. 가능하다, 할수있다"
+      ],
+      "readings": [
+        "가"
+      ],
+      "in": [
+        43
+      ]
+    },
+    {
+      "hanja": "望",
+      "meanings": [
+        "바라다"
+      ],
+      "readings": [
+        "망"
+      ],
+      "in": [
+        43
+      ]
+    },
+    {
+      "hanja": "見",
+      "meanings": [
+        "보다"
+      ],
+      "readings": [
+        "견"
+      ],
+      "in": [
+        43
+      ]
+    },
+    {
+      "hanja": "郞",
+      "meanings": [
+        "사내"
+      ],
+      "readings": [
+        "랑"
+      ],
+      "in": [
+        44,
+        45
+      ]
+    },
+    {
+      "hanja": "云",
+      "meanings": [
+        "이를"
+      ],
+      "readings": [
+        "운"
+      ],
+      "in": [
+        44
+      ]
+    },
+    {
+      "hanja": "月",
+      "meanings": [
+        "달"
+      ],
+      "readings": [
+        "월"
+      ],
+      "in": [
+        44,
+        45,
+        47
+      ]
+    },
+    {
+      "hanja": "出",
+      "meanings": [
+        "날"
+      ],
+      "readings": [
+        "출"
+      ],
+      "in": [
+        44,
+        45
+      ]
+    },
+    {
+      "hanja": "來",
+      "meanings": [
+        "올"
+      ],
+      "readings": [
+        "래"
+      ],
+      "in": [
+        44,
+        45
+      ]
+    },
+    {
+      "hanja": "想",
+      "meanings": [
+        "생각"
+      ],
+      "readings": [
+        "상"
+      ],
+      "in": [
+        46
+      ]
+    },
+    {
+      "hanja": "應",
+      "meanings": [
+        "응할다"
+      ],
+      "readings": [
+        "응"
+      ],
+      "in": [
+        46
+      ]
+    },
+    {
+      "hanja": "君",
+      "meanings": [
+        "임금"
+      ],
+      "readings": [
+        "군"
+      ],
+      "in": [
+        46
+      ]
+    },
+    {
+      "hanja": "處",
+      "meanings": [
+        "곳"
+      ],
+      "readings": [
+        "처"
+      ],
+      "in": [
+        46
+      ]
+    },
+    {
+      "hanja": "遲",
+      "meanings": [
+        "더디다"
+      ],
+      "readings": [
+        "지"
+      ],
+      "in": [
+        47
       ]
     }
   ]
