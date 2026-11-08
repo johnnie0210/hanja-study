@@ -43,7 +43,7 @@ GitHub 저장소에 `기말_한자.xlsx` 파일을 올리거나 교체하면, Gi
 1. GitHub 저장소에서 `기말_한자.xlsx`를 업로드/교체합니다.
    - **Add file → Upload files** 로 올리거나, 기존 파일을 열어 **Replace** 합니다.
    - 파일 이름은 반드시 `기말_한자.xlsx` 그대로 유지해 주세요. (이름이 다르면 자동 반영되지 않습니다.)
-2. **Commit changes** 를 누릅니다.
+2. **Commit changes** 를 누릅니다. (가능하면 `main` 브랜치에 직접 커밋)
 3. 저장소의 **Actions** 탭에서 `Update hanja data` 워크플로가 실행됩니다.
 4. 완료되면 `data.js`가 자동으로 갱신되고, 잠시 후 사이트에 반영됩니다.
    - 서비스 워커가 **network-first**라서 앱을 다시 열면 최신 내용을 받아옵니다.
